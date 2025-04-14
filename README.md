@@ -69,6 +69,6 @@ For questions or support, please contact [Frankie(Yeats)](https://xlog.frankie.s
 
 ### BUY ME A COFFEE
 ### 如果你觉得这个项目对你有帮助，欢迎请我喝杯咖啡~
-暂无
+[💰 支持作者](https://github.com/FrankieeW/DonateME/blob/main/README.md)
 
 ---
