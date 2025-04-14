@@ -207,7 +207,7 @@
 \newcommand{\watermark}[2][logo.pdf]{%
     \def\wmopacity{0.5}% 默认透明度
     \IfValueT{#2}{\def\wmopacity{#2}}% 如果提供了第二个参数
-    
+
     \AddToShipoutPictureBG{%
         \parbox[b][\paperheight]{\paperwidth}{%
             \vfill%
@@ -221,3 +221,5 @@
         }%
     }%
 }
+% 定义 DUT 的标准蓝色
+\definecolor{dutblue}{RGB}{2,115,188}

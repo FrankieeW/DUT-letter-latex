@@ -60,3 +60,4 @@ Temporary Items
 # Ignore out directory except for the .pdf file
 out/*
 !out/refer.pdf
+!out/refer.png

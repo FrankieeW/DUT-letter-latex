@@ -4,7 +4,7 @@
 % More details and comments can be found in the dutletter_en.cls file.
 
 % Author: Frankie
-% Date: 2024/10/10
+% Date: 2025/04/13
 % Github: FrankieeW
 % E-Mail: frankie.fc.wang@outlook.com
 %%%%%%%%%%%%%%%%%%%%%% 中文 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,13 +13,13 @@
 % 细节注释见 dutletter_en.cls
 
 % 作者：Frankie
-% 日期：2024/10/10
+% 日期：2025/04/13
 % Github: FrankieeW
 % E-Mail: frankie.fc.wang@outlook.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MIT License
 
-% Copyright (c) [2024] Frankie
+% Copyright (c) [2025] Frankie
 
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % of this software and associated documentation files (the "Software"), to deal
@@ -41,6 +41,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %请使用 LuaLaTeX
 %XeLaTeX 和 PDFLaTeX 会导致水印在第二页加重
+
 \documentclass[12pt]{dutletter_en}
 
 % 导入所需的宏包
@@ -61,8 +62,6 @@
 %使用 Times New Roman 字体
 \setmainfont{Times New Roman}
 
-% 定义 DUT 的标准蓝色
-\definecolor{dutblue}{RGB}{2,115,188}
 
 % 设置页面样式以显示页码
 \pagestyle{fancy}
@@ -235,7 +234,7 @@ Dalian University of Technology\\
 %     Bristol, BS8 1SD\\
 %     United Kingdom
 % }
-%Edinburgh 招生委员会
+%Edinburgh
 % \begin{letter}{Postgraduate Admissions Committee\\
 %     University of Edinburgh\\
 %     Charles Stewart House\\
@@ -252,11 +251,10 @@ Dalian University of Technology\\
 \opening{Dear Postgraduate Admissions Committee,}
 
 % 如果您不想要 DUT 标志水印，请删除以下行
-\watermark{}
-% \watermark[logo.pdf]{0.3} %在figs文件夹中放置 logo.pdf
+\watermark[logo.pdf]{0.3} %在figs文件夹中放置 logo.pdf
 
 % 信件正文（此处使用 lipsum 生成示例文本）
-\lipsum[1-8]
+\lipsum[1-2]
 
 
 
