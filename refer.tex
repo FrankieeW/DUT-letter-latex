@@ -1,0 +1,272 @@
+%%%%%%%%%%%%%%%%%%%%  English  %%%%%%%%%%%%%%%%%%%%%%%%
+% main.tex - an example LaTeX file to demonstrate the usage of dutletter_en.cls
+% This template demonstrates how to use the dutletter_en.cls class to create letters with DUT letterhead.
+% More details and comments can be found in the dutletter_en.cls file.
+
+% Author: Frankie
+% Date: 2024/10/10
+% Github: FrankieeW
+% E-Mail: frankie.fc.wang@outlook.com
+%%%%%%%%%%%%%%%%%%%%%% 中文 %%%%%%%%%%%%%%%%%%%%%%%%
+% main.tex - 示例 LaTeX 文件，演示如何使用 dutletter_en.cls
+% 此模板演示了如何使用 dutletter_en.cls 类创建带有大连理工大学信头的信件。
+% 细节注释见 dutletter_en.cls
+
+% 作者：Frankie
+% 日期：2024/10/10
+% Github: FrankieeW
+% E-Mail: frankie.fc.wang@outlook.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MIT License
+
+% Copyright (c) [2024] Frankie
+
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%请使用 LuaLaTeX
+%XeLaTeX 和 PDFLaTeX 会导致水印在第二页加重
+\documentclass[12pt]{dutletter_en}
+
+% 导入所需的宏包
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[english]{babel}
+\usepackage{lipsum} % 用于生成示例文本
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+% 如果需要，可以在此处设置自定义字体。DUT 使用 Source Serif Pro。
+% 如果您没有安装 Source Serif Pro，请注释掉下一行；
+% 将使用计算机现代字体（或您的默认字体）。
+% \setmainfont{Source Serif Pro}
+%使用 Times New Roman 字体
+\setmainfont{Times New Roman}
+
+% 定义 DUT 的标准蓝色
+\definecolor{dutblue}{RGB}{2,115,188}
+
+% 设置页面样式以显示页码
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\rhead{Page \thepage\ of \pageref{LastPage}}
+
+% 定义自定义坐标系用于 \tikz（如果需要）
+\makeatletter
+\def\parsecomma#1,#2\endparsecomma{\def\page@x{#1}\def\page@y{#2}}
+\tikzdeclarecoordinatesystem{page}{
+    \parsecomma#1\endparsecomma
+    \pgfpointanchor{current page}{north east}
+    \pgf@xc=\pgf@x%
+    \pgf@yc=\pgf@y%
+    \pgfpointanchor{current page}{south west}
+    \pgf@xb=\pgf@x%
+    \pgf@yb=\pgf@y%
+    \pgfmathparse{(\pgf@xc-\pgf@xb)/2.*\page@x+(\pgf@xc+\pgf@xb)/2.}
+    \expandafter\pgf@x\expandafter=\pgfmathresult pt
+    \pgfmathparse{(\pgf@yc-\pgf@yb)/2.*\page@y+(\pgf@yc+\pgf@yb)/2.}
+    \expandafter\pgf@y\expandafter=\pgfmathresult pt
+}
+\makeatother
+%%%%%%%%%%%%%%%%  pdf信息  %%%%%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={Letter of Recommendation},
+    pdfauthor={Jintao Zhang},
+    pdfsubject={Letter of Recommendation},
+    pdfkeywords={Dalian University of Technology, Leicester International Institute, DUT, DLI, Letter of Recommendation},
+}
+
+%%%%%%%%%%% 在此处填写个人信息 %%%%%%%%%%%
+\def\name{Jintao Zhang,\\
+Associate Professor,\\
+Vice Dean,\\
+Leicester International Institute, \\
+Dalian University of Technology\\
+\today
+}
+
+%%%%%%%%%%%%  其他联系信息 %%%%%%%%%%%
+
+% 莱斯特国际学院
+\def\Where{%
+    \textbf{\color{dutblue}Leicester International Institute, \\
+    Dalian University of Technology}
+}
+%数学科学学院
+% \def\Where{%
+%     \textbf{\color{dutblue}School of Mathematical Sciences, \\
+%     Dalian University of Technology}
+% }
+
+%盘锦校区
+\def\Address{
+    No.2 Dagong Road,\\
+    Dawa District,
+}
+\def\Campus{\textbf{\color{dutblue}Panjin Campus}}
+\def\CityZip{Panjin, Liaoning, China 116024}
+
+% 凌水校区
+% \def\Campus{\textbf{\color{dutblue}Lingshui Campus}}
+% \def\Address{
+%     No.2 Linggong Road,\\
+%     Ganjingzi District,
+% }
+% \def\CityZip{Dalian, Liaoning, China 116024}
+
+
+%办公室位置
+\def\Office{\textbf{\color{dutblue}Office}: C08-306-2}
+% \def\TEL{\textbf{\color{dutblue}Phone}: 0427-2631105}
+
+\def\Email{\textbf{\color{dutblue}E-mail}: \href{mailto:example@dlut.edu.cn}{example@dlut.edu.cn}}
+
+\def\URL{\textbf{\color{dutblue}URL}: \\\href{https://faculty.dlut.edu.cn/example}{https://faculty.dlut.edu.cn/}}
+
+%%%%%%%%%%%%%%%%  页脚信息  %%%%%%%%%%%%%%%%%%
+% 盘锦校区
+\def\school{\small{
+    Dalian University of Technology, Panjin Campus$\cdot$
+    Leicester International Institute $\cdot$
+    No.2 Dagong Road $\cdot$
+    Panjin, Liaoning, China 124221}
+}
+% 凌水校区
+% \def\school{\small{
+%     Dalian University of Technology, Lingshui Campus$\cdot$
+%     School of Mathematical Sciences $\cdot$
+%     No.2 Linggong Road $\cdot$
+%     Ganjingzi District, Dalian, Liaoning, China 116024}
+% }
+
+% 设置页脚（如果类文件已定义页脚，此设置可能会被覆盖）
+\cfoot{\school}
+
+%%%%%%%%%%%%%%%%%%%%%  签名行  %%%%%%%%%%%%%%%%%%%%%
+% 使用电子签名
+% \signature{
+%     % 中文或英文签名，也可以同时使用，scale参数依据图片大小调整
+%     \vspace{-5mm}
+%     \includegraphics[scale=0.80]{figs/name_cn.png} % % 使用中文签名
+%     \includegraphics[scale=0.12]{figs/name_en.jpg} % % 使用英文签名
+%     \\\vspace{-2mm}
+%     \name
+% }
+% 使用手写签名（留白）
+\signature{
+    \vspace{2mm}
+    \name
+}
+% 设置发信人地址为空（我们将在后面自定义地址显示位置）
+\address{}
+
+% 定义新的地址块，用于在信头右侧显示
+% 没定义的记得注释掉
+\def\newaddress{%
+    \Where\\
+    \Campus\\
+    \Address\\
+    \CityZip\\
+    \Office\\
+    % \TEL\\
+    \Email\\
+    \URL
+}
+
+%%%%%%%%%%%  日期  %%%%%%%%%%%%%%%%%%%%%%%%%
+\date{\vspace{10mm} \today}
+
+%%%%%%%%%%% 设置主题（如果有）  %%%%
+% \subject{Letter of Recommendation} % 可选主题行
+
+\begin{document}
+% Oxford
+% \begin{letter}{
+%   Mathematical Institute\\
+%   University of Oxford\\
+%   Andrew Wiles Building\\
+%   Woodstock Road\\
+%   Oxford, OX2 6GG\\
+%   United Kingdom
+% }
+% Cambridge
+% \begin{letter}{
+%     Faculty of Mathematics\\
+%     University of Cambridge\\
+%     Wilberforce Road\\
+%     Cambridge CB3 0WA\\
+%     United Kingdom
+% }
+% ICL Mathematics
+\begin{letter}{Department of Mathematics \\
+    Imperial College London \\
+    South Kensington Campus \\
+    Huxley Building \\
+    180 Queen's Gate \\
+    London, SW7 2AZ \\
+    United Kingdom
+    }
+
+% Bristol
+% \begin{letter}{Department of Mathematics\\
+%     University of Bristol\\
+%     Howard House\\
+%     Queens Avenue\\
+%     Bristol, BS8 1SD\\
+%     United Kingdom
+% }
+%Edinburgh 招生委员会
+% \begin{letter}{Postgraduate Admissions Committee\\
+%     University of Edinburgh\\
+%     Charles Stewart House\\
+%     9-16 Chambers Street\\
+%     Edinburgh, EH1 1HT\\
+%     United Kingdom
+% }
+% 在信头右侧插入地址信息
+\begin{tikzpicture}[remember picture,overlay,,every node/.style={anchor=center}]
+\node[text width=7cm] at (page cs:0.5,0.73){\small \newaddress};
+\end{tikzpicture}
+
+% 开头问候语
+\opening{Dear Postgraduate Admissions Committee,}
+
+% 如果您不想要 DUT 标志水印，请删除以下行
+\watermark{}
+% \watermark[logo.pdf]{0.3} %在figs文件夹中放置 logo.pdf
+
+% 信件正文（此处使用 lipsum 生成示例文本）
+\lipsum[1-8]
+
+
+
+% 结尾致辞
+\closing{Sincerely,}
+% 根据需要，注释或取消注释以下行
+% \encl{如果有附件，请在此处注明。}
+%日期
+
+% \ps{PS: Should you need any additional information, please do not hesitate to contact me at \href{mailto:qjguo@dlut.edu.cn}{qjguo@dlut.edu.cn}. I am more than happy to discuss Fengcheng's qualifications further.}
+\end{letter}
+
+\end{document}
