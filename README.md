@@ -28,7 +28,7 @@
 
 
 - **refer.tex**：模版文件
-- **dutletter_en.cls**：用于格式化英文文档（例如公函或报告）的类文件。
+- **dutletter_en.cls**：类文件
 - figs：存放图片的文件夹（有两个logo）
 - **refer.pdf**：例子<code>refer.tex</code>编译后的结果。
   <br>  ![refer](figs/refer.png)
@@ -51,10 +51,11 @@
    ```
 - 也可以直接使用 `refer.tex` 文件。
 - 编译时使用 LuaLaTeX（如果需要水印）。
+- 如有需要，可根据项目要求对文件进行修改。
 
 ### BUG
-- emmm 用LuaLaTex编译。（如果要水印的话）
-- 如有需要，可根据项目要求对文件进行修改。
+- emmm 用LuaLaTex编译。（如果要水印的话），用Xe or PDF LaTex的话水印除了第一页都会很深，记得当年debug好久，最终选择摆烂。
+
 
 ### 贡献
 
