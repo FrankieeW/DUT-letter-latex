@@ -31,7 +31,7 @@
 - **dutletter_en.cls**：用于格式化英文文档（例如公函或报告）的类文件。
 - figs：存放图片的文件夹（有两个logo）
 - **refer.pdf**：例子<code>refer.tex</code>编译后的结果。
-  <br>  ![refer](out/refer.png)
+  <br>  ![refer](figs/refer.png)
 
 ### 特点
 
@@ -67,7 +67,7 @@
 ### 联系方式
 
 如有疑问或需要支持，请联系 [Email](mailto::frankie.fc.wang@outlook.com)
-或访问 [~~Frankie~~](https://xlog.frankie.science)。
+或访问 [~~Frankie~~](https://blog.frankie.science)。
 
 ### 如果你觉得这个项目对你有帮助，欢迎请我喝杯咖啡~
 
@@ -90,7 +90,7 @@ This project provides LaTeX files.
 - **dutletter_en.cls**: Class file for formatting English documents (e.g., letters or reports).
 - **figs**: Folder for storing images (contains two logos).
 - **refer.pdf**: Example of the compiled result of `refer.tex`.
-  <br>  ![refer](out/refer.png)
+  <br>  ![refer](figs/refer.png)
 
 
 ### Features
@@ -122,7 +122,7 @@ This project is licensed under the [MIT License](LICENSE).
 ### Contact
 
 For questions or support, please contact [Email](mailto::frankie.fc.wang@outlook.com)
-or [~~Frankie~~](https://xlog.frankie.science)。
+or [~~Frankie~~](https://blog.frankie.science)。
 
 
 ### BUY ME A COFFEE
