@@ -1,5 +1,64 @@
 # DUT-letter-latex
+## 中文版本
+<div align="left">
 
+[![EN](https://img.shields.io/badge/EN-English-blue)](#english-version)
+[![CN](https://img.shields.io/badge/CN-中文-red)](#中文版本)
+
+</div>
+
+### 项目概述
+大连理工大学的公函模版。（非官方）
+实际上 用写推荐信的，祝福大家留学顺利。
+该项目提供了 LaTeX 文件。
+暂时只用LuaLaTex编译。
+
+
+- **refer.tex**：模版文件
+- **dutletter_en.cls**：用于格式化英文文档（例如公函或报告）的类文件。
+- figs：存放图片的文件夹（有两个logo）
+
+### 特点
+
+- **自定义格式**：该类文件帮助确保官方文档的一致风格。
+- **中英文双语支持**：提供中英文文档说明，方便不同语言使用者参考。(也没人需要英文版吧)
+
+### 安装方法
+
+1. 克隆或下载本仓库。
+2. 将下载的 `.tex` 与 `.cls` 文件放置在您的 LaTeX 项目目录中。
+
+
+### 使用方法
+- 在主 `.tex` 文件中调用类文件，例如：
+   ```latex
+   \documentclass{dutletter_en}
+   ```
+- 也可以直接使用 `refer.tex` 文件。
+- 编译时使用 LuaLaTeX（如果需要水印）。
+
+### BUG
+- emmm 用LuaLaTex编译。（如果要水印的话）
+- 如有需要，可根据项目要求对文件进行修改。
+
+### 贡献
+
+欢迎提交问题或拉取请求（Pull Request），以提出改进意见或报告错误。
+
+### 许可证
+
+本项目遵循 [MIT 许可证](LICENSE)。
+
+### 联系方式
+
+如有疑问或需要支持，请联系 [Email](mailto::frankie.fc.wang@outlook.com)
+或访问 [Frankie(Yeats)](https://xlog.frankie.science)。
+
+### 如果你觉得这个项目对你有帮助，欢迎请我喝杯咖啡~
+
+[💰 支持作者](https://github.com/FrankieeW/DonateME/blob/main/README.md)
+
+---
 ## English Version
 ### Overview
 <div align="left">
@@ -8,14 +67,18 @@
 [![CN](https://img.shields.io/badge/CN-中文-red)](#中文版本)
 
 </div>
-This project provides LaTeX files that facilitate document creation. The provided files are:
+Dalian University of Technology letter template. (Unofficial)
+Actually, it is used for writing recommendation letters. Best wishes for your study abroad.
+This project provides LaTeX files.
 
-- **refer.tex**: Contains bibliographic or reference configurations.
-- **dutletter_en.cls**: A class file for formatting English documents.
+- **refer.tex**: Template file.
+- **dutletter_en.cls**: Class file for formatting English documents (e.g., letters or reports).
+- **figs**: Folder for storing images (contains two logos).
+
 
 ### Features
-
-- **Custom Formatting**: For Reference letters.
+- **Custom Format**: The class file helps ensure a consistent style for official documents.
+- **Bilingual Support**: Provides bilingual documentation for reference by users of different languages.
 
 ### Installation
 
@@ -41,61 +104,11 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### Contact
 
-For questions or support, please contact [Frankie(Yeats)](https://xlog.frankie.science).
+For questions or support, please contact [Email](mailto::frankie.fc.wang@outlook.com)
+or [Frankie(Yeats)](https://xlog.frankie.science)。
 
----
-
-## 中文版本
-<div align="left">
-
-[![EN](https://img.shields.io/badge/EN-English-blue)](#english-version)
-[![CN](https://img.shields.io/badge/CN-中文-red)](#中文版本)
-
-</div>
-### 项目概述
-
-本项目提供用于文档排版的 LaTeX 文件，主要包括以下两个文件：
-
-- **refer.tex**：提供参考文献定义或文献管理的相关设置。
-- **dutletter_en.cls**：用于格式化英文文档（例如公函或报告）的类文件。
-
-### 特点
-
-- **自定义格式**：该类文件帮助确保官方文档的一致风格。
-- **便捷引用管理**：参考文件简化了引用和参考文献格式设置。
-- **中英文双语支持**：提供中英文文档说明，方便不同语言使用者参考。
-
-### 安装方法
-
-1. 克隆或下载本仓库。
-2. 将下载的 `.tex` 与 `.cls` 文件放置在您的 LaTeX 项目目录中。
-3. 在主 `.tex` 文件中调用类文件，例如：
-   ```latex
-   \documentclass{dutletter_en}
-   ```
-
-### 使用方法
-
-- emmm 用LuaLaTex编译。（如果要水印的话）
-- 如有需要，可根据项目要求对文件进行修改。
-
-### 贡献
-
-欢迎提交问题或拉取请求（Pull Request），以提出改进意见或报告错误。
-
-### 许可证
-
-本项目遵循 [MIT 许可证](LICENSE)。
-
-### 联系方式
-
-如有疑问或需要支持，请联系 [Email](mailto::frankie.fc.wang@outlook.com)
-或访问 [Frankie(Yeats)](https://xlog.frankie.science)。
 
 ### BUY ME A COFFEE
-
-### 如果你觉得这个项目对你有帮助，欢迎请我喝杯咖啡~
-
-[💰 支持作者](https://github.com/FrankieeW/DonateME/blob/main/README.md)
+[💰 BUY ME A COFFEE](https://github.com/FrankieeW/DonateME/blob/main/README.md)
 
 ---
