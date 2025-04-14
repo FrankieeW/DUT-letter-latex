@@ -1,11 +1,24 @@
 # DUT-letter-latex
+![GitHub stars](https://img.shields.io/github/stars/FrankieeW/DUT-letter-latex?style=social)
+![GitHub forks](https://img.shields.io/github/forks/FrankieeW/DUT-letter-latex?style=social)
+![GitHub issues](https://img.shields.io/github/issues/FrankieeW/DUT-letter-latex)
+![GitHub license](https://img.shields.io/github/license/FrankieeW/DUT-letter-latex)
+![GitHub last commit](https://img.shields.io/github/last-commit/FrankieeW/DUT-letter-latex)
+![GitHub contributors](https://img.shields.io/github/contributors/FrankieeW/DUT-letter-latex)
+![GitHub repo size](https://img.shields.io/github/repo-size/FrankieeW/DUT-letter-latex)
+![GitHub language count](https://img.shields.io/github/languages/count/FrankieeW/DUT-letter-latex)
+![GitHub top language](https://img.shields.io/github/languages/top/FrankieeW/DUT-letter-latex)
+[![Donate](https://img.shields.io/badge/Donate%20ME-000?logo=tether)](https://github.com/FrankieeW/DonateME/blob/main/README.md)
 ## 中文版本
 <div align="left">
 
 [![EN](https://img.shields.io/badge/EN-English-blue)](#english-version)
 [![CN](https://img.shields.io/badge/CN-中文-red)](#中文版本)
+  <!-- <a href="https://github.com/FrankieeW/DonateME/blob/main/README.md" target="_blank">
+    <img src="https://img.shields.io/badge/Donate%20ME-000?logo=tether" alt="Donate me">
+  </a> -->
 
-</div>
+
 
 ### 项目概述
 大连理工大学的公函模版。（非官方）
